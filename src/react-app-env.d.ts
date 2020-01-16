@@ -64,3 +64,7 @@ declare module '*.module.sass' {
 }
 
 declare module 'react-ionicons/lib/IosSettingsOutline'
+declare module 'react-ionicons/lib/IosMailOutline'
+declare module 'react-ionicons/lib/IosShirtOutline'
+declare module 'react-ionicons/lib/IosBrowsersOutline'
+declare module 'react-ionicons/lib/IosSearchOutline'

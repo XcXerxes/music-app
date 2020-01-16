@@ -16,6 +16,10 @@
   color: rgba(0, 0, 0, 0.65);
   background-color: transparent;
   outline: none;
+  &.primary {
+    padding: 0 10px;
+    border-radius: 4px;
+  }
   &:hover {
     background-color: $--color-white-opacity2;
   }

@@ -2,7 +2,12 @@ import React, { useState } from 'react'
 import styles from './index.module.scss'
 import TabItem, { MenuItemProps } from 'components/common/TabItem'
 import Setting from 'react-ionicons/lib/IosSettingsOutline'
+import Mail from 'react-ionicons/lib/IosMailOutline'
+import ShirtOutline from 'react-ionicons/lib/IosShirtOutline'
+import BrowsersOutline from 'react-ionicons/lib/IosBrowsersOutline'
+import Search from 'react-ionicons/lib/IosSearchOutline'
 import Button from 'components/common/Button'
+import Input from 'components/common/Input'
 
 const menus = [
   {
@@ -47,12 +52,31 @@ const Header = () => {
           ))}
         </ul>
         <div className={styles["header-content__action"]}>
-          <input type="text"/>
-          <div className={styles["header-content__tool"]}>
-            <Button round>
-              <Setting />
-            </Button>
+          <div className={styles['header-content__field']}>
+            <Input placeholder="搜索" icon={<Search fontSize="18px" />} />
           </div>
+          <ul className={styles["header-content__tool"]}>
+            <li>
+              <Button round>
+                <Setting fontSize="18px" />
+              </Button>
+            </li>
+            <li>
+              <Button round>
+                <Mail fontSize="18px" />
+              </Button>
+            </li>
+            <li>
+              <Button round>
+                <ShirtOutline fontSize="18px" />
+              </Button>
+            </li>
+            <li>
+              <Button round>
+                <BrowsersOutline fontSize="18px" />
+              </Button>
+            </li>
+          </ul>
         </div>  
       </div>
     </header>

@@ -1,0 +1,33 @@
+@import 'assets/styles/common/var';
+
+.input-wrapper {
+  display: inline-flex;
+  position: relative;
+  input {
+    outline: none;
+    border: none;
+    height: 24px;
+    width: 150px;
+    line-height: 24px;
+    background-color: $--color-gray;
+    border-radius: 15px;
+    padding: 0 10px;
+    color: $--color-white-4;
+    transition: all .25s ease;
+    &:focus {
+      box-shadow: 0px 0px 10px 0 rgba($--color-dark, .4);
+    }
+    &.has-icon {
+      padding-left: 25px;
+    }
+  }
+}
+.input-icon {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  color: $--color-white-4;
+}
