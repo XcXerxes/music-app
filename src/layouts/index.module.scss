@@ -1,0 +1,28 @@
+@import 'assets/styles/common/var';
+
+.header {
+  height: 52px;
+  background-color: $--color-white-9;
+  display: flex;
+  padding: 0 15px;
+  &-nav {
+    width: 200px;
+  }
+  &-content {
+    flex: 1;
+    padding-left: 15px;
+    display: flex;
+    height: inherit;
+    justify-content: space-between;
+    &__menu {
+      display: flex;
+      height: inherit;
+      align-items: center;
+    }
+    &__action {
+      display: flex;
+      height: inherit;
+      align-items: center;
+    }
+  }
+}

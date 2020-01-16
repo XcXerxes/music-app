@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+ul, li {
+  list-style: none;
+}
+
+html, body {
+  height: 100%;
+  font-size: 14px;
+  color: $--color-white-4;
+  -webkit-font-smoothing: antialiased;
+}

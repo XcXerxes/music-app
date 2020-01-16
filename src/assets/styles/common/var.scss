@@ -1,0 +1,12 @@
+$--color-primary: #C0463A;
+$--color-white-9: #f9f9f9;
+$--color-white-4: #646464;
+$--color-white-opacity2: rgba(0, 0, 0, .1);
+$--color-white: #FFFFFF;
+$--color-dark: #000000;
+:root {
+  --var-primary: #{$--color-primary};
+  --var-white-9: #{$--color-white-9};
+  --var-white-4: #{$--color-white-4};
+  --var-dark: #{$--color-dark};
+}

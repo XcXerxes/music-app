@@ -21,6 +21,7 @@
     "babel-preset-react-app": "^9.1.0",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.2.0",
+    "clsx": "^1.0.4",
     "css-loader": "3.2.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -52,9 +53,10 @@
     "react-app-polyfill": "^1.0.5",
     "react-dev-utils": "^10.0.0",
     "react-dom": "^16.12.0",
+    "react-ionicons": "^3.1.4",
     "resolve": "1.12.2",
     "resolve-url-loader": "3.1.1",
-    "sass-loader": "8.0.0",
+    "sass-loader": "^8.0.2",
     "semver": "6.3.0",
     "style-loader": "1.0.0",
     "terser-webpack-plugin": "2.2.1",
@@ -149,6 +151,7 @@
     "electron": "^7.1.9",
     "electron-builder": "^22.2.0",
     "electron-is-dev": "^1.1.0",
+    "node-sass": "^4.13.0",
     "wait-on": "^3.3.0"
   }
 }
