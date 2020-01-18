@@ -12,6 +12,13 @@ ul, li {
 html, body {
   height: 100%;
   font-size: 14px;
-  color: $--color-white-4;
   -webkit-font-smoothing: antialiased;
+  line-height: 1;
+}
+a {
+  color: $--color-dark-2;
+  transition: all .25s ease;
+  &:hover {
+    color: rgba($--color-dark-2, .7);
+  }
 }

@@ -1,11 +1,14 @@
 import React from 'react'
 import Layout from 'layouts'
+import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <Layout />
-    </div>
+    <Router>
+      <Switch>
+        <Route path="/" component={Layout} />
+      </Switch>
+    </Router>
   );
 }
 

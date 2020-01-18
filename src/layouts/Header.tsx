@@ -53,27 +53,27 @@ const Header = () => {
         </ul>
         <div className={styles["header-content__action"]}>
           <div className={styles['header-content__field']}>
-            <Input placeholder="搜索" icon={<Search fontSize="18px" />} />
+            <Input placeholder="搜索" icon={<Search fontSize="20px" />} />
           </div>
           <ul className={styles["header-content__tool"]}>
             <li>
               <Button round>
-                <Setting fontSize="18px" />
+                <Setting fontSize="20px" />
               </Button>
             </li>
             <li>
               <Button round>
-                <Mail fontSize="18px" />
+                <Mail fontSize="20px" />
               </Button>
             </li>
             <li>
               <Button round>
-                <ShirtOutline fontSize="18px" />
+                <ShirtOutline fontSize="20px" />
               </Button>
             </li>
             <li>
               <Button round>
-                <BrowsersOutline fontSize="18px" />
+                <BrowsersOutline fontSize="20px" />
               </Button>
             </li>
           </ul>

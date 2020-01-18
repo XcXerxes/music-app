@@ -1,0 +1,46 @@
+@import 'assets/styles/common/var';
+.thumbnail-item {
+  margin-bottom: 20px;
+  transition: all .25s ease;
+  &:hover {
+    opacity: .85;
+  }
+  &__5 {
+    flex: 0 1 19%;
+  }
+  &__4 {
+    flex: 0 1 24%;
+  }
+  &__3 {
+    flex: 0 1 32%;
+  }
+  &__body {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+  &__media {
+    height: 100%;
+    width: inherit;
+    img {
+      border-radius: 4px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &__views {
+    position: absolute;
+    color: $--color-white;
+    right: 10px;
+    top: 0;
+    display: flex;
+    align-items: center;
+  }
+  &__footer {
+    padding: 2px 5px;
+    font-size: 13px;
+    span {
+      line-height: 1.3;
+    }
+  }
+}

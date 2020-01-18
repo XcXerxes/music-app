@@ -5,10 +5,12 @@ $--color-white-opacity2: rgba(0, 0, 0, .1);
 $--color-white: #FFFFFF;
 $--color-dark: #000000;
 $--color-gray: #ededed;
+$--color-dark-2: #313131;
 :root {
   --var-primary: #{$--color-primary};
   --var-white-9: #{$--color-white-9};
   --var-white-4: #{$--color-white-4};
   --var-dark: #{$--color-dark};
   --var-gray: #{$--color-gray};
+  --var-dark-2: #{$--color-dark-2};
 }

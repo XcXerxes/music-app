@@ -2,16 +2,27 @@ import React from 'react'
 import Header from './Header'
 import Aside from './Aside'
 import Footer from './Footer'
+import styles from './index.module.scss'
+import { Switch, Route, Redirect } from 'react-router-dom'
+
+const FindMusicViews = React.lazy(() => import('views/find-music/FindMusic'))
 
 type Props = {
   children?: React.ReactElement
 }
 const Layout:React.FC<Props> = (props) => {
   return (
-    <div>
+    <div className={styles.container}>
       <Header />
-      <Aside></Aside>
-      <main>{props.children}</main>
+      <main className={styles.main}>
+        <Aside></Aside>
+        <React.Suspense fallback={<p>loading</p>}>
+          <Switch>
+            <Route path="/find" component={FindMusicViews} />
+            <Redirect from="/" to="/find" />
+          </Switch>
+        </React.Suspense>
+      </main>
       <Footer />
     </div>
   )
