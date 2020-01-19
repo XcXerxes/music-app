@@ -18,7 +18,16 @@
   outline: none;
   &.primary {
     padding: 0 10px;
+    height: 30px;
+    line-height: 28px;
+    width: 160px;
     border-radius: 4px;
+    border: 1px solid $--color-primary;
+    color: $--color-primary;
+    font-size: 14px;
+    &:hover {
+      background-color: rgba($--color-primary, .1);
+    }
   }
   &:hover {
     background-color: $--color-white-opacity2;

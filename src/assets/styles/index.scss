@@ -12,4 +12,8 @@
   overflow: auto;
   -webkit-overflow-scrolling: touch;
   padding: 0 15px;
+  &-wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+  }
 }

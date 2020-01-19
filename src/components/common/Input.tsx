@@ -5,7 +5,7 @@ import clsx from 'clsx'
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   icon?: React.ReactElement
 }
-const Input:React.FC<Props> = ({ icon, ...newProps }) => {
+export const Input:React.FC<Props> = ({ icon, ...newProps }) => {
   return (
     <div className={styles['input-wrapper']}>
       <div className={styles['input-icon']}>

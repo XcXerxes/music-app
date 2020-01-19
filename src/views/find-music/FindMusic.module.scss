@@ -16,17 +16,24 @@
   padding-top: 10px;
 }
 .find-item {
+  margin-bottom: 20px;
   &__menus {
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
+  &__newmenus {
+    flex-direction: column;
+  }
 }
 
 .find-footer {
   text-align: center;
-  margin: 50px 0;
+  margin: 100px 0;
   color: $--color-white-4;
   font-size: 12px;
+  p {
+    margin-bottom: 20px;
+  }
 }

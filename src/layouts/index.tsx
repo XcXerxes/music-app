@@ -16,12 +16,14 @@ const Layout:React.FC<Props> = (props) => {
       <Header />
       <main className={styles.main}>
         <Aside></Aside>
-        <React.Suspense fallback={<p>loading</p>}>
-          <Switch>
-            <Route path="/find" component={FindMusicViews} />
-            <Redirect from="/" to="/find" />
-          </Switch>
-        </React.Suspense>
+        <div className="container">
+          <React.Suspense fallback={<p>loading</p>}>
+            <Switch>
+              <Route path="/find" component={FindMusicViews} />
+              <Redirect from="/" to="/find" />
+            </Switch>
+          </React.Suspense>
+        </div>
       </main>
       <Footer />
     </div>

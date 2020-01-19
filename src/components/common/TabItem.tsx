@@ -12,7 +12,7 @@ type Props = {
   id: number,
   onClick: (item: MenuItemProps) => void
 }
-const TabItem:React.FC<Props> = (props) => {
+export const TabItem:React.FC<Props> = (props) => {
   const { name, id, activeId, onClick } = props
   function handleClick () {
     if (id !== activeId) {
