@@ -1,5 +1,12 @@
-import { ApisauceInstance, create, ApiResponse } from 'apisauce'
-import { getGeneralApiProblem } from './api-problem'
+/*
+ * @Description: 
+ * @Author: leo
+ * @Date: 2020-01-19 16:36:56
+ * @LastEditors: leo
+ * @LastEditTime: 2020-01-20 16:20:38
+ */
+import { ApisauceInstance, create } from 'apisauce'
+// import { getGeneralApiProblem } from './api-problem'
 import { DEFAULT_API_CONFIG } from './api-config'
 
 const api:ApisauceInstance = create({

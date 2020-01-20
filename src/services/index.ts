@@ -3,7 +3,7 @@
  * @Author: leo
  * @Date: 2020-01-19 16:36:56
  * @LastEditors  : leo
- * @LastEditTime : 2020-01-19 19:32:19
+ * @LastEditTime : 2020-01-20 18:32:38
  */
 import api from './api'
 
@@ -31,6 +31,14 @@ export default {
   // 主播电台
   getDjprogram (params: any) {
     return api.get('/personalized/djprogram', params)
+  },
+  // 歌单(网友精选碟)
+  getPlayList (params: any) {
+    return api.get('/top/playlist', params)
+  },
+  // 热门歌单分类
+  getHotPlayList (params: any) {
+    return api.get('/playlist/hot', params)
   }
 }
 

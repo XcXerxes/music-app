@@ -1,23 +1,25 @@
 import React from 'react'
-import LazyLoad from 'react-lazyload'
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css'
 
 type LazyImageProps = {
   src?: string,
-  resize?: boolean,
   placeholder?: React.ReactElement|React.ReactHTMLElement<any>,
   height?: string | number,
-  scroll?: boolean
+  alt?: string
 }
-export const LazyImage: React.FC<LazyImageProps> = ({ src, placeholder, resize, height, scroll }) => {
+export const LazyImage: React.FC<LazyImageProps> = ({ src, placeholder, alt, height }) => {
   return (
-    <LazyLoad height={height} resize={resize} placeholder={placeholder} scroll={scroll}>
-      <img src={src} alt={src} />
-    </LazyLoad>
+    <LazyLoadImage
+      effect="blur"
+      height={height}
+      placeholderSrc={'https://via.placeholder.com/150x150'}
+      alt={alt}
+      src={src}
+    />  
   )
 }
 LazyImage.defaultProps = {
-  resize: true,
-  scroll: false,
-  placeholder: <img src="https://via.placeholder.com/150x150" alt="150" />
+  placeholder: <img src="https://via.placeholder.com/150x150" alt="placeholder" />,
 }
 export default LazyImage

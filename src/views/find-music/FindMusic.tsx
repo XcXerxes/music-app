@@ -6,17 +6,18 @@ import { HeadingTitle, ThumbnailItem, MusicItem, AnchorStationItem, Button } fro
 import { useFetch } from 'hooks/useFetch'
 import services from 'services'
 import clsx from 'clsx'
+import PageLoading from 'components/skeleton/PageLoading'
 
 const FindMusic = () => {
-  const { data, loading }: any = useFetch(services.getBanner, {})
-  const { data: NewData }: any = useFetch(services.getPersonalized, { limit: 10 })
+  const { data }: any = useFetch(services.getBanner, {})
+  const { data: NewData, loading }: any = useFetch(services.getPersonalized, { limit: 10 })
   const { data: privatecontentData }: any = useFetch(services.getPrivatecontent, { limit: 10 })
   const { data: newSongData }: any = useFetch(services.getNewSong, { limit: 10 })
   const { data: mvData }: any = useFetch(services.getPersonalizedMv, { limit: 10 })
   const { data: getDjprogramData }: any = useFetch(services.getDjprogram, { limit: 10 })
   console.log(data)
   return (
-    <div className="container-wrapper">
+    <div className="music-app__wrapper">
       <div className={styles.carousel}>
         <Carousel type="card" indicatorClassName="carousel-indicator" indicatorPosition="outside" autoplay height={200}>
           {data.banners && data.banners.map((item: any) => (
@@ -29,14 +30,14 @@ const FindMusic = () => {
         </Carousel>
       </div>
       <div className={styles['find-content']}>
-        <div className={styles['find-item']}>
+      {loading ? <PageLoading /> : <div className={styles['find-item']}>
           <HeadingTitle title="推荐歌单" />
           <ul className={styles['find-item__menus']}>
             {NewData.result && NewData.result.map((item: any) => (
               <ThumbnailItem column={5} key={item.id} {...item} />
             ))}
           </ul>
-        </div>
+        </div>}
         <div className={styles['find-item']}>
           <HeadingTitle title="独家放送" />
           <ul className={styles['find-item__menus']}>

@@ -1,6 +1,6 @@
 import React from 'react'
 import Layout from 'layouts'
-import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 const App: React.FC = () => {
   return (

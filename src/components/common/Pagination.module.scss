@@ -1,0 +1,10 @@
+@import 'assets/styles/common/var';
+
+.pagination-wrapper {
+  display: flex;
+  align-items: center;
+}
+.total {
+  margin-left: 10px;
+  color: $--color-primary;
+}

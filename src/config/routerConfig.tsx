@@ -10,13 +10,15 @@ export interface routerConfigProps {
   id: number,
   title: string,
   icon?: React.ComponentType,
+  path?: string,
   children?: routerConfigProps[]
 }
 export const routerConfig: routerConfigProps[] = [
   {
     id: 1,
     title: '发现音乐',
-    icon: IosMusicalNotesOutline
+    icon: IosMusicalNotesOutline,
+    path: '/find'
   },
   {
     id: 2,

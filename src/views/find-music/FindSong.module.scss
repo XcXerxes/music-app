@@ -1,0 +1,33 @@
+@import 'assets/styles/common/var';
+
+.banner {
+  height: 170px;
+  background-color: #0f0f0f;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+.find-song {
+  &__heading {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__tabs {
+    display: flex;
+    align-items: center;
+  }
+  &__content {
+   padding: 20px 0; 
+  }
+  &__menus {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+}

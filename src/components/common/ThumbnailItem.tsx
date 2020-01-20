@@ -12,14 +12,15 @@ type Props = {
   name?: string,
   playCount?: number,
   url?: string,
-  artists?: any
+  artists?: any,
+  id?: number
 }
-export const ThumbnailItem:React.FC<Props> = ({ column, picUrl, name, playCount, url, artists }) => {
+export const ThumbnailItem:React.FC<Props> = ({ column, picUrl, name, playCount, url, artists, id }) => {
   return (
     <li className={clsx(styles['thumbnail-item'], styles[`thumbnail-item__${column}`] )}>
       <div className={styles['thumbnail-item__body']}>
         <div className={styles['thumbnail-item__media']}>
-          <LazyImage src={picUrl} />
+          <LazyImage key={id} height="100%" src={picUrl} alt={name} />
         </div>
         {playCount &&<div className={styles['thumbnail-item__views']}>
           <MdArrowDroprightCircle color="#fff" />

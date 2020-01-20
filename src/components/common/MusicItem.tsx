@@ -13,7 +13,7 @@ export const MusicItem: React.FC<MusicItemProps> = ({ picUrl, name, song }) => {
   return (
     <li className={styles['music-item']}>
       <div className={styles['music-item__media']}>
-        <LazyImage src={picUrl} />
+        <LazyImage height="100%" src={picUrl} alt={name} />
       </div>
       <div className={styles['music-item__body']}>
         <div className={styles['music-item__description']}>

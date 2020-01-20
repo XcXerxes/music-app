@@ -12,35 +12,44 @@ import Input from 'components/common/Input'
 const menus = [
   {
     id: 1,
-    name: '个性推荐'
+    name: '个性推荐',
+    path: ''
   },
   {
     id: 2,
-    name: '歌单'
+    name: '歌单',
+    path: '/find/song'
   },
   {
     id: 3,
-    name: '主播电台'
+    name: '主播电台',
+    path: '/find/anchor'
   },
   {
     id: 4,
-    name: '排行榜'
+    name: '排行榜',
+    path: '/find/ranking'
   },
   {
     id: 5,
-    name: '歌手'
+    name: '歌手',
+    path: '/find/singer'
   },
   {
     id: 6,
-    name: '最新音乐'
+    name: '最新音乐',
+    path: '/find/new'
   }
 ]
-
-const Header = () => {
-  const [activeId, setactiveId] = useState(1)
+type Props = {
+  history: any
+}
+const Header:React.FC<Props> = ({ history }) => {
+  const [activecat, setactivecat] = useState('个性推荐')
   // 菜单切换时
   function tabItemClick (tab: MenuItemProps) {
-    setactiveId(tab.id)
+    setactivecat(tab.name)
+    history.push(tab.path)
   }
   return (
     <header className={styles["header"]}>
@@ -48,7 +57,7 @@ const Header = () => {
       <div className={styles["header-content"]}>
         <ul className={styles["header-content__menu"]}>
           {menus.map((item: MenuItemProps) => (
-            <TabItem activeId={activeId} key={item.id} {...item} onClick={tabItemClick} />
+            <TabItem activeName={activecat} key={item.id} {...item} onClick={tabItemClick} />
           ))}
         </ul>
         <div className={styles["header-content__action"]}>

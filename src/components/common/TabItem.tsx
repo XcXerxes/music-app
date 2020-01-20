@@ -4,23 +4,24 @@ import clsx from 'clsx'
 
 export interface MenuItemProps {
   name: string,
-  id: number
+  id?: number,
+  path?: string
 }
 type Props = {
   name: string,
-  activeId?: number,
-  id: number,
-  onClick: (item: MenuItemProps) => void
+  activeName?: string,
+  id?: number,
+  path?: string,
+  onClick: (item: MenuItemProps) => void,
+  activeClassName?: string
 }
 export const TabItem:React.FC<Props> = (props) => {
-  const { name, id, activeId, onClick } = props
+  const { name, activeName, onClick, activeClassName = '' } = props
   function handleClick () {
-    if (id !== activeId) {
-      onClick({ name, id })
-    }
+    onClick(props)
   }
   return (
-    <li onClick={handleClick} className={clsx(styles['tab-item'], { [styles.active]: activeId === id })}>
+    <li onClick={handleClick} className={clsx(styles['tab-item'], { [styles.active]: activeName === name }, activeClassName)}>
       <span>{name}</span>
     </li>
   )

@@ -1,10 +1,11 @@
 @import 'assets/styles/common/var';
 .button {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 400;
   white-space: nowrap;
-  text-align: center;
   background-image: none;
   border: 1px solid transparent;
   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.015);
@@ -16,10 +17,29 @@
   color: rgba(0, 0, 0, 0.65);
   background-color: transparent;
   outline: none;
+  >.prefix-icon {
+    display: inline-flex;
+    margin-right: 5px;
+  }
+  >.suffix-icon {
+    display: inline-flex;
+    margin-left: 5px;
+  }
+  &.default {
+    padding: 0 10px;
+    height: 30px;
+    width: 160px;
+    border-radius: 4px;
+    border: 1px solid $--color-gray-3;
+    color: $--color-white-4;
+    font-size: 14px;
+    &:hover {
+      background-color: rgba($--color-gray-3, .1);
+    }
+  }
   &.primary {
     padding: 0 10px;
     height: 30px;
-    line-height: 28px;
     width: 160px;
     border-radius: 4px;
     border: 1px solid $--color-primary;
