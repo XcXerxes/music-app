@@ -3,7 +3,7 @@
  * @Author: leo
  * @Date: 2020-01-19 16:36:56
  * @LastEditors  : leo
- * @LastEditTime : 2020-01-20 18:32:38
+ * @LastEditTime : 2020-01-21 20:16:58
  */
 import api from './api'
 
@@ -39,6 +39,25 @@ export default {
   // 热门歌单分类
   getHotPlayList (params: any) {
     return api.get('/playlist/hot', params)
+  },
+  // 电台banner
+  getDjBanner (params: any) {
+    return api.get('/dj/banner', params)
+  },
+  // 电台个性推荐
+  getDjRecommend (params: any) {
+    return api.get('/dj/recommend', params)
+  },
+  // 创作｜翻唱 3D|电子 音乐故事 情感调频 二次元
+  getDjRadioHot (params: any) {
+    return api.get('/dj/radio/hot', params)
+  },
+  // 付费精品
+  getDjPaygift (params: any) {
+    return api.get('/dj/paygift', params)
+  },
+  // 歌单详情
+  getPlayDataDetail (params: any) {
+    return api.get('/playlist/detail', params)
   }
 }
-

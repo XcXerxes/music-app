@@ -13,11 +13,16 @@ type Props = {
   playCount?: number,
   url?: string,
   artists?: any,
-  id?: number
+  id?: number,
+  rcmdtext?: string,
+  onClick?: any
 }
-export const ThumbnailItem:React.FC<Props> = ({ column, picUrl, name, playCount, url, artists, id }) => {
+export const ThumbnailItem:React.FC<Props> = ({ column, picUrl, name, playCount, url, artists, id, rcmdtext, onClick }) => {
+  function handleClick () {
+    onClick(id)
+  }
   return (
-    <li className={clsx(styles['thumbnail-item'], styles[`thumbnail-item__${column}`] )}>
+    <li className={clsx(styles['thumbnail-item'], styles[`thumbnail-item__${column}`] )} onClick={handleClick}>
       <div className={styles['thumbnail-item__body']}>
         <div className={styles['thumbnail-item__media']}>
           <LazyImage key={id} height="100%" src={picUrl} alt={name} />
@@ -29,6 +34,7 @@ export const ThumbnailItem:React.FC<Props> = ({ column, picUrl, name, playCount,
         {(playCount === null || playCount === undefined) && <div className={styles['thumbnail-item__play']}>
           {url ? <IosLinkOutline color="#fff" /> : <MdArrowDroprightCircle color="#fff" /> }
         </div>}
+        {rcmdtext && <div className={styles['thumbnail-item__description']}>{rcmdtext}</div>}
       </div>
       <div className={styles['thumbnail-item__footer']}>
         <p>{name}</p>

@@ -1,21 +1,29 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import styles from './FindMusic.module.scss'
 import Carousel from 'xerxes-react-carousel'
-import 'xerxes-react-carousel/lib/index.css'
 import { HeadingTitle, ThumbnailItem, MusicItem, AnchorStationItem, Button } from 'components/common'
 import { useFetch } from 'hooks/useFetch'
 import services from 'services'
 import clsx from 'clsx'
 import PageLoading from 'components/skeleton/PageLoading'
 
-const FindMusic = () => {
+type FindMusicProps = {
+  history: any
+}
+const FindMusic:React.FC<FindMusicProps> = ({ history }) => {
   const { data }: any = useFetch(services.getBanner, {})
   const { data: NewData, loading }: any = useFetch(services.getPersonalized, { limit: 10 })
   const { data: privatecontentData }: any = useFetch(services.getPrivatecontent, { limit: 10 })
   const { data: newSongData }: any = useFetch(services.getNewSong, { limit: 10 })
   const { data: mvData }: any = useFetch(services.getPersonalizedMv, { limit: 10 })
   const { data: getDjprogramData }: any = useFetch(services.getDjprogram, { limit: 10 })
-  console.log(data)
+
+  const newItemClick = useCallback(
+    (id: any) => {
+      history.push(`/music-detail/${id}`)
+    },
+    [history]
+  )
   return (
     <div className="music-app__wrapper">
       <div className={styles.carousel}>
@@ -29,15 +37,16 @@ const FindMusic = () => {
           ))}
         </Carousel>
       </div>
+      { loading ? <PageLoading /> :
       <div className={styles['find-content']}>
-      {loading ? <PageLoading /> : <div className={styles['find-item']}>
+        <div className={styles['find-item']}>
           <HeadingTitle title="推荐歌单" />
           <ul className={styles['find-item__menus']}>
             {NewData.result && NewData.result.map((item: any) => (
-              <ThumbnailItem column={5} key={item.id} {...item} />
+              <ThumbnailItem onClick={newItemClick} column={5} key={item.id} {...item} />
             ))}
           </ul>
-        </div>}
+        </div>
         <div className={styles['find-item']}>
           <HeadingTitle title="独家放送" />
           <ul className={styles['find-item__menus']}>
@@ -66,11 +75,11 @@ const FindMusic = () => {
           <HeadingTitle title="主播电台" />
           <ul className={styles['find-item__menus']}>
             {getDjprogramData.result && getDjprogramData.result.map((item: any) => (
-              <AnchorStationItem {...item} column={5} key={item.id} />
+              <AnchorStationItem {...item.program.radio} column={5} key={item.id} />
             ))}
           </ul>
         </div>
-      </div>
+      </div>}
       <div className={styles['find-footer']}>
         <p>现在可以根据个人喜好，自由调整首页栏目顺序啦~</p>
         <Button color="primary">调整栏目顺序</Button>

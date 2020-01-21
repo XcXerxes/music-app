@@ -1,0 +1,17 @@
+@import 'assets/styles/common/var';
+
+.banner {
+  margin-top: 15px;
+}
+.find-content {
+  padding-top: 10px;
+}
+.find-item {
+  margin-bottom: 20px;
+  &__menus {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

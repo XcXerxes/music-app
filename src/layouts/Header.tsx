@@ -23,7 +23,7 @@ const menus = [
   {
     id: 3,
     name: '主播电台',
-    path: '/find/anchor'
+    path: '/find/dj'
   },
   {
     id: 4,

@@ -4,29 +4,29 @@ import LazyImage from './LazyImage'
 
 type AnchorStationItemProps = {
   name?: string,
-  program?: any
+  picUrl?: any,
+  rcmdText?: string,
+  desc?: string,
+
 }
-export const  AnchorStationItem: React.FC<AnchorStationItemProps> = ({ name, program }) => {
+export const  AnchorStationItem: React.FC<AnchorStationItemProps> = ({ name, picUrl, rcmdText, desc }) => {
   return (
     <li className={styles['anchor-item']}>
       <div className={styles['anchor-item__media']}>
-        <LazyImage height="100%" src={program.radio && program.radio.picUrl} alt={name} />
+        <LazyImage height="100%" src={picUrl} alt={name} />
       </div>
       <div className={styles['anchor-item__body']}>
         <div className={styles['anchor-item__description']}>
           <p className={styles.title}>
-            {program.radio && (program.radio.rcmdText || program.radio.desc)}
+            {rcmdText || desc}
           </p>
           <div className={styles['anchor-item__author']}>
-            {program.radio && program.radio.name}
+            {name}
           </div>
         </div>
       </div>
     </li>
   )
-}
-AnchorStationItem.defaultProps = {
-  program: {}
 }
 
 export default  AnchorStationItem

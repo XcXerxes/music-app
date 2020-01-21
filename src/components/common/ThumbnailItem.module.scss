@@ -10,6 +10,10 @@
     flex: 0 1 19%;
     width: 19%;
   }
+  &__6 {
+    flex: 0 1 15%;
+    width: 15%;
+  }
   &__4 {
     flex: 0 1 24%;
     width: 24%;
@@ -50,6 +54,20 @@
     top: 4px;
     display: flex;
     align-items: center;
+  }
+  &__description {
+    position: absolute;
+    color: $--color-white;
+    left: 5px;
+    bottom: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 800;
+    white-space: nowrap;
+    right: 10px;
   }
   &__footer {
     padding: 2px 5px;

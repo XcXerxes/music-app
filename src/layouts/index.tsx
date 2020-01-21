@@ -7,6 +7,9 @@ import { Switch, Route, Redirect } from 'react-router-dom'
 
 const FindMusicViews = React.lazy(() => import('views/find-music/FindMusic'))
 const FindSongViews = React.lazy(() => import('views/find-music/FindSong'))
+const FindDjViews = React.lazy(() => import('views/find-music/FindDj'))
+
+const MusicDetailViews = React.lazy(() => import('views/music-detail/MusicDetail'))
 
 type Props = {
   children?: React.ReactElement,
@@ -24,6 +27,10 @@ const Layout:React.FC<Props> = (props) => {
             <Switch>
               <Route path="/find" exact component={FindMusicViews} />
               <Route path="/find/song" exact component={FindSongViews} />
+              <Route path="/find/dj" exact component={FindDjViews} />
+
+              <Route path="/music-detail/:id" component={MusicDetailViews} />
+
               <Redirect from="/" to="/find" />
             </Switch>
           </React.Suspense>

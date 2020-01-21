@@ -1,0 +1,62 @@
+@import 'assets/styles/common/var';
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  &__media {
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    img {
+      border-radius: 5px;
+    }
+  }
+  &__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 0;
+    min-height: 200px;
+    .title {
+      font-size: 16px;
+    }
+    .update {
+      display: flex;
+      align-items: center;
+      color: $--color-white-4;
+    }
+    .buttonGroup {
+      button:nth-of-type(2) {
+        margin: 0 15px;
+      }
+    }
+    .tags {
+      display: flex;
+      align-items: center;
+      p {
+        color: $--color-primary;
+      }
+    }
+    .songs {
+      display: flex;
+      align-items: center;
+      p {
+        span {
+          color: $--color-white-4;
+        }
+        &:last-child {
+          margin-left: 15px;
+        }
+      }
+    }
+    .desc {
+      display: flex;
+      align-items: center;
+      p {
+        flex: 1;
+        color: $--color-white-4;
+      }
+    }
+  }
+}
