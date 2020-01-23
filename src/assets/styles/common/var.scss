@@ -1,5 +1,6 @@
 $--color-primary: #C0463A;
 $--color-white-9: #f9f9f9;
+$--color-white-8: #fafafa;
 $--color-white-4: #646464;
 $--color-white-opacity2: rgba(0, 0, 0, .1);
 $--color-white: #FFFFFF;
@@ -7,6 +8,9 @@ $--color-dark: #000000;
 $--color-gray: #ededed;
 $--color-dark-2: #313131;
 $--color-gray-3: #ccc;
+$--color-gray-1: #aaa;
+
+$--table-hover-color: #f2f2f2;
 :root {
   --var-primary: #{$--color-primary};
   --var-white-9: #{$--color-white-9};
@@ -15,4 +19,5 @@ $--color-gray-3: #ccc;
   --var-gray: #{$--color-gray};
   --var-dark-2: #{$--color-dark-2};
   --var-gray-3: #{$--color-gray-3};
+  --var-table-hover: #{$--table-hover-color};
 }

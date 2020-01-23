@@ -9,13 +9,14 @@ type LazyImageProps = {
   alt?: string
 }
 export const LazyImage: React.FC<LazyImageProps> = ({ src, placeholder, alt, height }) => {
+  const newSrc = src ? `${src}?param=200y200` : ''
   return (
     <LazyLoadImage
-      effect="blur"
       height={height}
       placeholderSrc={'https://via.placeholder.com/150x150'}
+      placeholder={placeholder}
       alt={alt}
-      src={src}
+      src={newSrc}
     />  
   )
 }

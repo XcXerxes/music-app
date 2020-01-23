@@ -60,4 +60,12 @@
   height: 60px;
   background-color: $--color-white;
   border-top: 1px solid $--color-gray;
+  display: flex;
+}
+.footer-player {
+  flex: 1;
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
 }

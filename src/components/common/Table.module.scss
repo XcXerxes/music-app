@@ -1,0 +1,57 @@
+@import 'assets/styles/common/var';
+
+.table {
+  border-spacing: 0;
+  width: 100%;
+  th, td {
+    height: 36px;
+    min-height: 36px;
+    font-size: 12px;
+  }
+  .th {
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    color: $--color-gray-1;
+    &:hover {
+      background-color: $--table-hover-color;
+      .th-sort {
+        opacity: 1;
+      }
+    }
+  }
+  .th-sort {
+    opacity: 0;
+  }
+  tbody {
+    tr {
+      &:nth-of-type(2n+1) {
+        background-color: $--color-white-8;
+      }
+      &:hover {
+        background-color: $--table-hover-color;
+      }
+    }
+    td {
+      &:first-child {
+        .td {
+          color: $--color-dark;
+        }
+      }
+      &:last-child {
+        .td {
+          color: $--color-gray-1;
+        }
+      }
+    }
+    .td {
+      display: flex;
+      height: inherit;
+      align-items: center;
+      padding: 0 5px;
+      color: $--color-white-4;
+    }
+  }
+}
