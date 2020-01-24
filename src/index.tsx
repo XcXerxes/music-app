@@ -4,8 +4,20 @@ import App from './App'
 import 'assets/styles/index.scss'
 import 'xerxes-react-carousel/lib/index.css'
 import * as serviceWorker from './serviceWorker'
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 
-ReactDOM.render(<App />, document.getElementById('root'))
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: '#C0463A'
+    }
+  }
+})
+
+ReactDOM.render((
+  <ThemeProvider theme={theme}>
+    <App />
+  </ThemeProvider>), document.getElementById('root'))
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

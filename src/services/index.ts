@@ -3,7 +3,7 @@
  * @Author: leo
  * @Date: 2020-01-19 16:36:56
  * @LastEditors  : leo
- * @LastEditTime : 2020-01-21 20:16:58
+ * @LastEditTime : 2020-01-24 16:23:56
  */
 import api from './api'
 
@@ -59,5 +59,13 @@ export default {
   // 歌单详情
   getPlayDataDetail (params: any) {
     return api.get('/playlist/detail', params)
+  },
+  // 检测音乐是否可播放
+  checkMusic (params: any) {
+    return api.get('/check/music', params)
+  },
+  // 获取音乐播放地址
+  getSongUrl (params: any) {
+    return api.get('/song/url', params)
   }
 }

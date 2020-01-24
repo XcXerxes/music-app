@@ -61,6 +61,13 @@
   background-color: $--color-white;
   border-top: 1px solid $--color-gray;
   display: flex;
+  position: relative;
+  .slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -11px;
+  }
 }
 .footer-player {
   flex: 1;
@@ -68,4 +75,28 @@
   height: inherit;
   align-items: center;
   justify-content: center;
+  * {
+    cursor: pointer;
+  }
+  &__play {
+    margin: 0 20px;
+    font-size: 45px;
+  }
+  .heart {
+    margin-right: 30px;
+  }
+  .share {
+    margin-left: 30px;
+  }
+  .skipPrevious {
+    font-size: 25px;
+  }
+  .skipNext {
+    font-size: 25px;
+  }
+}
+:global {
+  .slider-wrapper{
+    padding: 0 !important;
+  }
 }
