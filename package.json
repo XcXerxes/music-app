@@ -176,7 +176,7 @@
     "@types/redux-thunk": "^2.1.0",
     "babel-plugin-import": "^1.13.0",
     "concurrently": "^5.0.2",
-    "electron": "^7.1.9",
+    "electron": "^13.6.6",
     "electron-builder": "^22.2.0",
     "electron-is-dev": "^1.1.0",
     "node-sass": "^4.13.0",
